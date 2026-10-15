@@ -1,12 +1,12 @@
 # Escribe un programa que pida al usuario dos números reales (decimales) y calcule su suma.
 
-keepAsking = True
+suma = True
 
-while keepAsking == True:
+while suma == True:
 	try:
-		number1 = float(input("Introduce a number:"))
-		number2 = float(input("Introduce another number:"))
-		print("The sum of both numbers is:", number1 + number2)
-		keepAsking = False
+		num1 = float(input("Introduce un numero:"))
+		num2 = float(input("Introduce otro numero:"))
+		print("La suma de los dos es: ", num1 + num2)
+		suma = False
 	except ValueError:
-		print("Error: Caracter introduced wasn't a number.")
+		print("Error: El caracter introducido no es un numero.")

@@ -1,12 +1,12 @@
 # Realiza un programa que pida dos números enteros al usuario y devuelva el producto de ambos.
 
-keepAsking = True
+producto = True
 
-while keepAsking == True:
+while producto == True:
 	try:
-		number1 = int(input("Introduce an integer number:"))
-		number2 = int(input("Introduce another integer number:"))
-		print("The multiplication of both numbers is:", number1 * number2)
-		keepAsking = False
+		num1 = int(input("Introduce un numero entero:"))
+		num2 = int(input("Introduce otro numero entero:"))
+		print("La multiplicacion de ambos es: ", num1 * num2)
+		producto = False
 	except ValueError:
-		print("Error: Caracter introduced wasn't an integer number.")
+		print("Error: El caracter introducido no es un numero entero.")

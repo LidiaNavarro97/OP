@@ -1,12 +1,12 @@
 # Escribe un programa que solicite al usuario dos números enteros y muestre la suma de ambos.
 
-keepAsking = True
+suma = True
 
-while keepAsking == True:
+while suma == True:
 	try:
-		number1 = int(input("Introduce an integer number:"))
-		number2 = int(input("Introduce another integer number:"))
-		print("The sum of both numbers is:", number1 + number2)
-		keepAsking = False
+		num1 = int(input("Introduce un número entero:"))
+		num2 = int(input("Introduce otro número:"))
+		print("La suma de los dos es: ", num1 + num2)
+		suma = False
 	except ValueError:
-		print("Error: Caracter introduced wasn't an integer number.")
+		print("Error: El caracter introducido no es un número entero.")

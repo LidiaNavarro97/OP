@@ -1,12 +1,12 @@
 # Crea un programa que pida dos números enteros y muestre el resultado de restar el segundo número al primero.
 
-keepAsking = True
+resta = True
 
-while keepAsking == True:
+while resta == True:
 	try:
-		number1 = int(input("Introduce an integer number:"))
-		number2 = int(input("Introduce another integer number:"))
-		print("The substraction of both numers is:", number2 - number1)
-		keepAsking = False
+		num1 = int(input("Introduce un numero entero:"))
+		num2 = int(input("Introduce otro numero entero:"))
+		print("La resta de ambos numeros es: ", num2 - num1)
+		resta = False
 	except ValueError:
-		print("Error: Caracter introduced wasn't an integer number.")
+		print("Error: El caracter introducido no es un numero entero.")

@@ -13,6 +13,7 @@ MARCAS_MODELOS = {
 }
 
 #VENTAS
+# seria [Marca, Modelo, año_venta, año_fabricacion, precio]
 ventas = [
 ["SEAT", "Ibiza", 2024, 2023, 18000], ["SEAT", "Ibiza", 2024, 2024, 18500], ["SEAT", "Ibiza", 2024, 2024, 19000],
 ["SEAT", "Ibiza", 2025, 2024, 19500], ["SEAT", "Ibiza", 2025, 2025, 20000], ["SEAT", "Ibiza", 2025, 2025, 20200],
@@ -71,7 +72,73 @@ while modelo not in MARCAS_MODELOS[marca]:
 
 # d) Validacion de datos numericos (try/except)
 
+# Año de venta
+while True:
+    try:
+        anio_venta = int(input("Introduce el año de venta (2024-2026): "))
 
+        if anio_venta >= 2024 and anio_venta <= 2026:
+            break
+        else:
+            print("Error: el año de venta debe estar entre 2024 y 2026.")
+
+    except ValueError:
+        print("Error: debes introducir un número entero.")
+
+
+# Año de fabricación
+while True:
+    try:
+        anio_fabricacion = int(input("Introduce el año de fabricación (1990-" + str(anio_venta) + "): "))
+
+        if anio_fabricacion >= 1990 and anio_fabricacion <= anio_venta:
+            break
+        else:
+            print("Error: el año de fabricación debe estar entre 1990 y el año de venta.")
+
+    except ValueError:
+        print("Error: debes introducir un número entero.")
+
+
+# Precio
+while True:
+    try:
+        precio = int(input("Introduce el precio del vehículo (1000-100000 €): "))
+
+        if precio >= 1000 and precio <= 100000:
+            break
+        else:
+            print("Error: el precio debe estar entre 1.000 y 100.000 €.")
+
+    except ValueError:
+        print("Error: debes introducir un número entero.")
+
+# Añadir la nueva venta a la lista
+ventas.append([marca, modelo, anio_venta, anio_fabricacion, precio])
+
+print("Venta registrada correctamente.") 
+
+# 2) Resumen de Ventas por Marca, Modelo y Año de fabricacion
+
+resumen_ventas = {}
+
+for venta in ventas: #recorro ventas
+    marca = venta[0]
+    modelo = venta[1]
+    anio_venta = venta[2]
+    precio = venta[4]
+
+    clave = marca + "_" + modelo + "_" + str(anio_venta) #creo la clave del diccionario
+    #str convierte el año en texto y lo puede concatenar
+
+    #comprobamos si la clave ya existe
+    if clave in resumen_ventas:
+        resumen_ventas[clave][0] += 1 #total unidades vendidas
+        resumen_ventas[clave][1] += precio # total euros acumlados
+    else: #sino existe la creamos
+        resumen_ventas[clave] = [1, precio] #uno y otro
+
+print(resumen_ventas)
 
 
 

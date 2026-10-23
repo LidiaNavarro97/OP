@@ -2,11 +2,13 @@
 # El programa deberá pedir al usuario el coste de la comida y el porcentaje de propina que
 # quiere dejar, y luego devolver el importe total.
 
-comida = float(input("Introduce el coste de la comida: "))
-propina = float(input("Introduce el porcentaje de propina que quieras dejar: "))
+def importeRestaurante():
 
-porcentajePropina = comida * propina / 100
-total = comida + porcentajePropina 
+    comida = float(input("Introduce el coste de la comida: "))
+    propina = float(input("Introduce el porcentaje de propina que quieras dejar: "))
 
-print("El importe de la propina es: ", porcentajePropina)
-print("El importe total es: ", total)
+    porcentajePropina = comida * propina / 100
+    total = comida + porcentajePropina 
+
+    print("El importe de la propina es: ", porcentajePropina)
+    print("El importe total es: ", total)

@@ -1,8 +1,11 @@
 # Crea un programa que convierta metros a centímetros. El programa deberá
 # pedir al usuario que introduzca una cantidad en metros y devolver la cantidad en centímetros
 
-cantidadMetros = float(input("Introduce una cantidad en metros: "))
 
-cantidadCentimetros = cantidadMetros * 100 
+def metrosCentimetros():
 
-print("La cantidad en centímetros es: ", cantidadCentimetros)
+    cantidadMetros = float(input("Introduce una cantidad en metros: "))
+
+    cantidadCentimetros = cantidadMetros * 100 
+
+    print("La cantidad en centímetros es: ", cantidadCentimetros)

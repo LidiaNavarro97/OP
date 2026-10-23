@@ -1,7 +1,9 @@
 # Escribe un programa que pida al usuario su nombre y su apellido, y luego
 # imprima un mensaje de bienvenida que combine ambos
 
-nombre = input("Introduce tu nombre: ")
-apellido = input("Introuce tu apellido: ")
+def mensajeBienvenida():
 
-print("Nombre completo: ", nombre, " ", apellido)
+    nombre = input("Introduce tu nombre: ")
+    apellido = input("Introuce tu apellido: ")
+
+    print("Bienvenida ", nombre, " ", apellido, "!!!")

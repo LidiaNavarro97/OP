@@ -3,8 +3,10 @@
 # utilizando la fórmula Área = Pi * radio^2
 import math #para poder utilizar pi
 
-radioCirculo = float(input("Introduce el radio del circulo: "))
+def areaCirculo():
 
-area = math.pi * radioCirculo ** 2 #el ^ se utiliza con **
+    radioCirculo = float(input("Introduce el radio del circulo: "))
 
-print("El area de un circulo es: ", area)
+    area = math.pi * radioCirculo ** 2 #el ^ se utiliza con **
+
+    print("El area de un circulo es: ", area)

@@ -28,5 +28,5 @@ match option:
         calcularIMC()
     case 13:
         mensajeBienvenida()
-    case _:
+    case _: #en cualquier otro caso...
         print("Opción no válida")
